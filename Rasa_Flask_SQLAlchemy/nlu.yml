@@ -1,0 +1,60 @@
+# Specifies the version of the YAML syntax being used
+version: "3.1"
+
+# Natural Language Understanding configuration section, defines how the chatbot understands user intents
+nlu:
+# Intent for recognising greetings from users
+- intent: greet
+  # Examples of user inputs that match the 'greet' intent
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+
+# Intent for recognizing goodbyes from users
+- intent: goodbye
+  examples: |
+    - goodbye
+    - bye
+    - see you
+    - catch you later
+    - goodnight
+
+# Intent for recognizing when a user expresses stress
+- intent: express_stress
+  examples: |
+    - I'm feeling stressed
+    - just too much going on
+    - I'm under a lot of pressure due to exam deadlines
+    - I can't handle this stress at university
+    - feeling overwhelmed
+
+# Intent for when a user chooses an exercise from a given list
+- intent: choose_exercise
+  examples: |
+    - 1
+    - 2
+    - 3
+
+# Intent for starting an exercise
+- intent: start_exercise
+  examples: |
+    - next
+    - let's begin
+    - start
+
+# Intent for moving to the next step in exercise or in some other process
+- intent: next_step
+  examples: |
+    - next
+    - continue
+    - proceed
+
+# Intent used for providing information or making specific requests
+- intent: inform
+  examples: |
+    - restart
+    - start over
+    - go back

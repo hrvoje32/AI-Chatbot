@@ -1,0 +1,59 @@
+# Specifies the version of the YAML syntax being used
+version: "3.1"
+
+# A collection of stories that represent conversation paths between the user and the chatbot
+stories:
+# Story to handle the greeting interaction
+- story: greet user
+  steps: # Steps outline the sequence of events in the conversation
+    - intent: greet # User expresses greeting intention
+    - action: utter_greet # Chatbot responds with a greeting message
+
+# Story for handling user's goodbyes
+- story: user says goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+# Story for when a user expresses stress and chooses an exercise
+- story: stress expression and choosing exercise
+  steps:
+    - intent: express_stress
+    - action: utter_ask_exercise
+    - intent: choose_exercise
+    - action: action_start_exercise
+    - action: utter_start_exercise
+    - action: action_listen
+
+# Story detailing the flow of steps within an exercise
+- story: exercise flow
+  steps:
+  - action: action_start_exercise
+  - intent: next_step
+  - action: action_handle_next_step
+  - intent: next_step
+  - action: action_handle_next_step
+  - intent: next_step
+  - action: action_handle_next_step
+  - intent: express_stress
+  - action: utter_complete_exercise
+
+# Story for user actions after exercise
+- story: user continues after completing an exercise
+  steps:
+    - action: utter_complete_exercise
+    - intent: express_stress
+    - action: utter_ask_exercise
+
+# Story for handling incorrect or unexpected inputs during an exercise
+- story: handle incorrect input during exercise
+  steps:
+    - intent: inform
+    - action: utter_continue_or_restart_exercise
+    - intent: start_exercise
+    - action: action_handle_next_step
+
+# Story for handling inputs that the chatbot cannot recognise
+- story: handle unrecognized input
+  steps:
+    - action: action_listen
