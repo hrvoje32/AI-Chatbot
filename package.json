@@ -7,30 +7,48 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest --watchAll"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.1.17",
+    "@react-navigation/stack": "^6.3.29",
+    "axios": "^1.6.7",
+    "expo": "^50.0.11",
+    "jest-expo": "~50.0.3",
     "react": "18.2.0",
-    "react-native": "0.73.5"
+    "react-native": "0.73.5",
+    "react-native-gesture-handler": "^2.15.0",
+    "react-native-safe-area-context": "^4.9.0",
+    "react-native-screens": "^3.29.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
-    "@babel/preset-env": "^7.20.0",
-    "@babel/runtime": "^7.20.0",
+    "@babel/core": "^7.24.0",
+    "@babel/plugin-transform-flow-strip-types": "^7.23.3",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@babel/runtime": "^7.24.0",
     "@react-native/babel-preset": "0.73.21",
     "@react-native/eslint-config": "0.73.2",
     "@react-native/metro-config": "0.73.5",
     "@react-native/typescript-config": "0.73.1",
-    "@types/react": "^18.2.6",
-    "@types/react-test-renderer": "^18.0.0",
-    "babel-jest": "^29.6.3",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^12.4.3",
+    "@types/jest": "^29.5.12",
+    "@types/react": "^18.2.64",
+    "@types/react-native": "^0.73.0",
+    "@types/react-test-renderer": "^18.0.7",
+    "babel-jest": "^29.7.0",
     "eslint": "^8.19.0",
-    "jest": "^29.6.3",
+    "jest": "^29.7.0",
+    "metro-react-native-babel-preset": "^0.77.0",
     "prettier": "2.8.8",
-    "react-test-renderer": "18.2.0",
-    "typescript": "5.0.4"
+    "react-test-renderer": "^18.2.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.3"
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "proxy": "http://your-flask-server-ip:5000"
 }
