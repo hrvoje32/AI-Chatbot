@@ -1,3 +1,38 @@
+This project involves the design and development of a specialised AI chatbot focused on helping university students manage stress. Given the increasing mental health concerns in academic environments, this chatbot aims to provide a creative, accessible, and practical solution to recognize, understand, and assist students in dealing with stress.
+
+Key Features and Functionalities:
+
+Student-Centric Stress Management:
+o	Tailored to understand the unique challenges faced by university students, including academic pressure, interpersonal relationships, and career concerns.
+
+Feedback Mechanism:
+o	Incorporates a feedback feature, allowing continuous improvement and personalisation based on user interactions.
+
+Privacy and Confidentiality:
+o	Offers options for users to withhold feedback or data sharing, ensuring user confidentiality and trust.
+
+Mobile Optimization:
+o	Focused on mobile accessibility, enabling students to access the chatbot's services anytime and anywhere, catering to the mobile-dependent lifestyle of modern students.
+
+Innovative Response Mechanism:
+o	Features a novel system that allows users to decide if chatbot should save the given question in case it doesn’t know answer, enhancing its learning and effectiveness over time.
+
+Spelling and Grammar Handling:
+o	Includes basic handling for spelling and grammar errors.
+
+Conversation History Selection:
+o	Allows users to choose whether to keep a history of their conversations, providing additional control over their data.
+
+
+Technical Implementation:
+
+React Native: 
+o	Utilises React Native (still just React until design is finished) for developing a native mobile application, ensuring smooth performance on mobile devices.
+
+Python, RASA, and Flask: 
+o	Employs Python for backend development, RASA for AI functionalities, and Flask as a micro web framework to handle requests and responses.
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
